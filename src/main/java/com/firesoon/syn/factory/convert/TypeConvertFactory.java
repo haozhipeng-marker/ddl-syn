@@ -2,17 +2,12 @@ package com.firesoon.syn.factory.convert;
 
 import com.firesoon.syn.consts.ConvertType;
 import com.firesoon.syn.consts.DataBaseTypeProperties;
-import com.firesoon.syn.factory.convert.impl.MySQL2PostgreSQLTypeConverter;
-import com.firesoon.syn.factory.convert.impl.PostgreSql2MySQLTypeConverter;
-import com.firesoon.syn.factory.convert.impl.SqlServer2OracleSQLTypeConverter;
+import com.firesoon.syn.factory.convert.impl.*;
 import com.firesoon.syn.utils.JsonUtil;
 import com.firesoon.syn.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.firesoon.syn.factory.convert.impl.Oracle2PostgreSQLTypeConverter;
-
-import java.awt.*;
 import java.util.Map;
 
 /**
@@ -61,7 +56,12 @@ public final class TypeConvertFactory {
 				typeProperties = StringUtil.str2Map(DataBaseTypeProperties.ORACLE_TYPE_SCALA);
 				typeConverter = new SqlServer2OracleSQLTypeConverter(mapping, typeProperties);
 			}
-			else {
+			else if(ConvertType.ORACLE2ORACLE.equals(convertType)){
+				mapping = typeMapping.get("oracle2oracle");
+				typeProperties = StringUtil.str2Map(DataBaseTypeProperties.ORACLE_TYPE_SCALA);
+				typeConverter = new Oracle2OracleTypeConverter(mapping, typeProperties);
+
+			}else{
 				throw new IllegalArgumentException(String.format("无法识别的数据库类型：%s", convertType));
 			}
 		} catch (Exception e) {

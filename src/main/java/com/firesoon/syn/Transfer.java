@@ -1,29 +1,23 @@
 package com.firesoon.syn;
 
+import com.firesoon.syn.bean.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.firesoon.syn.hive.HiveTransfer;
-import com.firesoon.syn.bean.DBSettings;
-import com.firesoon.syn.bean.DataBaseDefine;
-import com.firesoon.syn.consts.DataBaseType;
 import com.firesoon.syn.factory.analyse.Analyser;
 import com.firesoon.syn.factory.analyse.AnalyserFactory;
 import com.firesoon.syn.factory.convert.TypeConvertFactory;
 import com.firesoon.syn.factory.generate.Generator;
 import com.firesoon.syn.factory.generate.GeneratorFactory;
 import com.firesoon.syn.utils.DBUrlUtil;
-import com.firesoon.syn.utils.StringUtil;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.io.InputStream;
-import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * 数据库结构及数据转换类
@@ -38,50 +32,106 @@ public final class Transfer {
 	 * 
 	 * @param args
 	 */
-	public static void main(String[] args) {
-		try {
-			logger.info("开始读取配置文件");
-			Map<String, String> settingMap = getSetting();
-			logger.info("配置文件读取完毕，配置信息：{}", StringUtil.toString(settingMap));
+	public static void main(String[] args) throws Exception {
 
-			logger.info("开始连接至数据库");
-			try (Connection sourceConnection = getSourceConnection(settingMap); Connection targetConnection = getTargetConnection(settingMap);) {
-				logger.info("成功连接至数据库");
+		//Testgetsql用例
+		DataSourceDetailDTO dataSourceDetailDTO = new DataSourceDetailDTO();
+		dataSourceDetailDTO.setDatabase("hdctest");
+		dataSourceDetailDTO.setHost("172.16.3.73");
+		dataSourceDetailDTO.setPort("1521");
+		dataSourceDetailDTO.setType("ORACLE");
+		dataSourceDetailDTO.setUserName("etl");
+		dataSourceDetailDTO.setPassword("etl");
+		JDBCDetailDTO jdbcDetailDTO = new JDBCDetailDTO();
+		jdbcDetailDTO.setDataSourceDetailDTO(dataSourceDetailDTO);
+		jdbcDetailDTO.setDriverClass("oracle.jdbc.driver.OracleDriver");
+		List<String> listTableName = new ArrayList();
+		listTableName.add("vwTblForView2");
+		TargetSourceDetial  targetSourceDetial = new TargetSourceDetial();
+		targetSourceDetial.setSourceId(1);
+		targetSourceDetial.setTargetSourceType("ORACLE");
 
-				logger.info("开始获取源数据库结构定义");
-				Analyser analyser = AnalyserFactory.getInstance(sourceConnection);
-				DataBaseDefine dataBaseDefine = analyser.getDataBaseDefine(sourceConnection);
-				logger.info("源数据库结构定义获取完毕");
+		List<String> sqlList = new ArrayList<>();
+		sqlList = OracleSqlGenerate.getOracleSql(jdbcDetailDTO,listTableName,"ORACLE");
+		System.out.println(sqlList);
 
-				String sourceDataBaseName = sourceConnection.getMetaData().getDatabaseProductName();
-				String targetDataBaseName = targetConnection.getMetaData().getDatabaseProductName();
-				if (!sourceDataBaseName.equals(targetDataBaseName)) {
-					logger.info("开始转换为目标数据库类型");
-					String convertType = sourceDataBaseName.toUpperCase() + "2" + targetDataBaseName.toUpperCase();
-					TypeConvertFactory.getInstance(convertType).convert(dataBaseDefine);
-					logger.info("目标数据库类型转换完成");
-				}
 
-				logger.info("开始构造目标数据库结构");
-				DBSettings targetDBSettings = new DBSettings();
-				targetDBSettings.setDataBaseName(settingMap.get("target.database.name"));
-				targetDBSettings.setDriverClass(settingMap.get("target.driverClass"));
-				targetDBSettings.setIpAddress(settingMap.get("target.database.ip"));
-				targetDBSettings.setPort(settingMap.get("target.database.port"));
-				targetDBSettings.setUserName(settingMap.get("target.user.name"));
-				targetDBSettings.setUserPassword(settingMap.get("target.user.password"));
-				targetDBSettings.setUserPassword(settingMap.get("target.user.schema"));
-				targetDBSettings.setDataBaseType(DataBaseType.ORACLE);
-				Generator generator = GeneratorFactory.getInstance(targetConnection, dataBaseDefine, targetDBSettings);
-				generator.generateStructure();
-				logger.info("目标数据库结构构造完成");
 
-			} catch (Throwable e) {
-				throw e;
-			}
-		} catch (Throwable e) {
-			logger.error("转换数据库失败", e);
-		}
+		////检测表结构是否发生变化。
+		//DataSourceDetailDTO dataSourceDetailDTO1 = new DataSourceDetailDTO();
+		//dataSourceDetailDTO1.setDatabase("HS");
+		//dataSourceDetailDTO1.setHost("172.16.8.46");
+		//dataSourceDetailDTO1.setPort("1433");
+		//dataSourceDetailDTO1.setType("SQLSERVER");
+		//dataSourceDetailDTO1.setUserName("sa");
+		//dataSourceDetailDTO1.setPassword("Sql@2019");
+		//JDBCDetailDTO JDBCDetailDTO = new JDBCDetailDTO();
+		//JDBCDetailDTO.setDataSourceDetailDTO(dataSourceDetailDTO1);
+		//JDBCDetailDTO.setDriverClass("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		//DataSourceDetailDTO dataSourceDetailDTO = new DataSourceDetailDTO();
+		//dataSourceDetailDTO.setDatabase("hdctest");
+		//dataSourceDetailDTO.setHost("172.16.3.73");
+		//dataSourceDetailDTO.setPort("1521");
+		//dataSourceDetailDTO.setUserName("hzp");
+		//dataSourceDetailDTO.setPassword("123456");
+		//dataSourceDetailDTO.setType("ORACLE");
+		//JDBCDetailDTO JDBCDetailDTO1 = new JDBCDetailDTO();
+		//JDBCDetailDTO1.setDriverClass("oracle.jdbc.driver.OracleDriver");
+		//JDBCDetailDTO1.setDataSourceDetailDTO(dataSourceDetailDTO);
+		//List<String> listTableName = new ArrayList();
+		//listTableName.add("dtproperties");
+		//listTableName.add("firesoon_drgs_diagnoseinfo_cy");
+		//
+		////List<String> list  = OracleSqlGenerate.getChangeTableddl(JDBCDetailDTO,listTableName, JDBCDetailDTO,1);
+		//OracleSqlGenerate.executeChangeTable(JDBCDetailDTO,listTableName, JDBCDetailDTO1,1);
+		//System.out.println();
+
+
+
+	////从原表读取整个数据库的表结构，进行类型转化，并且完成建表
+    //	try {
+	//		logger.info("开始读取配置文件");
+	//		Map<String, String> settingMap = getSetting();
+	//		logger.info("配置文件读取完毕，配置信息：{}", StringUtil.toString(settingMap));
+	//
+	//		logger.info("开始连接至数据库");
+	//		try (Connection sourceConnection = getSourceConnection(settingMap); Connection targetConnection = getTargetConnection(settingMap);) {
+	//			logger.info("成功连接至数据库");
+	//
+	//			logger.info("开始获取源数据库结构定义");
+	//			Analyser analyser = AnalyserFactory.getInstance(sourceConnection);
+	//			DataBaseDefine dataBaseDefine = analyser.getDataBaseDefine(sourceConnection);
+	//			logger.info("源数据库结构定义获取完毕");
+	//
+	//			String sourceDataBaseName = sourceConnection.getMetaData().getDatabaseProductName();
+	//			String targetDataBaseName = targetConnection.getMetaData().getDatabaseProductName();
+	//			if (!sourceDataBaseName.equals(targetDataBaseName)) {
+	//				logger.info("开始转换为目标数据库类型");
+	//				String convertType = sourceDataBaseName.toUpperCase() + "2" + targetDataBaseName.toUpperCase();
+	//				TypeConvertFactory.getInstance(convertType).convert(dataBaseDefine);
+	//				logger.info("目标数据库类型转换完成");
+	//			}
+	//
+	//			logger.info("开始构造目标数据库结构");
+	//			DBSettings targetDBSettings = new DBSettings();
+	//			targetDBSettings.setDataBaseName(settingMap.get("target.database.name"));
+	//			targetDBSettings.setDriverClass(settingMap.get("target.driverClass"));
+	//			targetDBSettings.setIpAddress(settingMap.get("target.database.ip"));
+	//			targetDBSettings.setPort(settingMap.get("target.database.port"));
+	//			targetDBSettings.setUserName(settingMap.get("target.user.name"));
+	//			targetDBSettings.setUserPassword(settingMap.get("target.user.password"));
+	//			targetDBSettings.setUserPassword(settingMap.get("target.user.schema"));
+	//			targetDBSettings.setDataBaseType(DataBaseType.ORACLE);
+	//			Generator generator = GeneratorFactory.getInstance(targetConnection, dataBaseDefine, targetDBSettings);
+	//			generator.generateStructure();
+	//			logger.info("目标数据库结构构造完成");
+	//
+	//		} catch (Throwable e) {
+	//			throw e;
+	//		}
+	//	} catch (Throwable e) {
+	//		logger.error("转换数据库失败", e);
+	//	}
 	}
 
 	/**

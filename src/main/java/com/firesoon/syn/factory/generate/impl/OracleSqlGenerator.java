@@ -198,7 +198,7 @@ public class OracleSqlGenerator extends Generator {
 
 					if (!StringUtil.isBlank(sourceColumn.getColumnComment()) && !sourceColumn.getColumnComment().equals(targetColumn.getColumnComment())) {
 						if(!StringUtil.isBlank(sourceDataBaseDefine.getTableName())){
-							stringBuilder.append("@COMMENT ON COLUMN ").append(sourceDataBaseDefine.getTableName()).append(".").append(columnName).append(" IS '").append(sourceColumn.getColumnComment()).append("'");
+							stringBuilder.append("@COMMENT ON COLUMN ").append(sourceTableDefine.getTableName()).append(".").append(columnName).append(" IS '").append(sourceColumn.getColumnComment()).append("'");
 						}
 
 					}

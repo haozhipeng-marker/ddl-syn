@@ -1,5 +1,6 @@
 package com.firesoon.syn.factory.analyse;
 
+import com.firesoon.syn.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,6 +46,21 @@ public abstract class Analyser {
 		for (Table table : tables) {
 			dataBaseDefine.putTable(table);
 		}
+		return dataBaseDefine;
+	}
+
+	public  DataBaseDefine getDataBaseDefine(Connection connetion,List<String> tableName )throws SQLException{
+		 DataBaseDefine dataBaseDefine = this.getDataBaseDefines(connection);
+		 List<Table> tables = this.listTables(connection);
+		 for(Table table:tables){
+		 	for(String name :tableName){
+				if(table!=null&&table.getTableName().equalsIgnoreCase(name)){
+					dataBaseDefine.putTable(table);
+				}
+			}
+
+
+		 }
 		return dataBaseDefine;
 	}
 

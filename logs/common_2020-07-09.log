@@ -1,0 +1,200 @@
+2020-07-09 14:12:39,658  INFO 6416 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 14:14:35,643  INFO 6416 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 14:14:37,049  INFO 6416 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 14:15:41,238 ERROR 6416 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.ClassNotFoundException: com.microsoft.sqlserver.jdbc.SQLServerDriver
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_221]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_221]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349) ~[?:1.8.0_221]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_221]
+	at java.lang.Class.forName0(Native Method) ~[?:1.8.0_221]
+	at java.lang.Class.forName(Class.java:264) ~[?:1.8.0_221]
+	at com.firesoon.syn.Transfer.getConnection(Transfer.java:150) ~[classes/:?]
+	at com.firesoon.syn.Transfer.getSourceConnection(Transfer.java:132) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:48) [classes/:?]
+2020-07-09 14:20:55,555  INFO 14004 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 14:21:03,376  INFO 14004 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 14:21:03,947  INFO 14004 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 14:22:59,987 ERROR 14004 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+com.microsoft.sqlserver.jdbc.SQLServerException: 该驱动程序不支持 SQL Server 8 版。 ClientConnectionId:d4b0d1a1-507a-49bf-ba0a-3d328898036e
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:1667) ~[sqljdbc4-4.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.terminate(SQLServerConnection.java:1654) ~[sqljdbc4-4.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.Prelogin(SQLServerConnection.java:1556) ~[sqljdbc4-4.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1319) ~[sqljdbc4-4.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:991) ~[sqljdbc4-4.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:827) ~[sqljdbc4-4.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:1012) ~[sqljdbc4-4.0.jar:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_221]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_221]
+	at com.firesoon.syn.Transfer.getConnection(Transfer.java:151) ~[classes/:?]
+	at com.firesoon.syn.Transfer.getSourceConnection(Transfer.java:132) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:48) [classes/:?]
+2020-07-09 14:25:48,773  INFO 12564 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 14:25:52,702  INFO 12564 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 14:25:53,773  INFO 12564 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 14:26:35,070 ERROR 12564 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+com.microsoft.sqlserver.jdbc.SQLServerException: 用户 'sa ' 登录失败。
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:197) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:246) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:83) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:2529) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:1905) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$000(SQLServerConnection.java:41) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:1893) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:4575) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:1400) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:1045) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:817) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:700) ~[sqljdbc4-3.0.jar:?]
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:842) ~[sqljdbc4-3.0.jar:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_221]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_221]
+	at com.firesoon.syn.Transfer.getConnection(Transfer.java:151) ~[classes/:?]
+	at com.firesoon.syn.Transfer.getSourceConnection(Transfer.java:132) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:48) [classes/:?]
+2020-07-09 14:26:58,489  INFO 14192 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 14:27:02,053  INFO 14192 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 14:27:02,221  INFO 14192 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 14:27:30,890  INFO 14192 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 14:27:55,058  INFO 14192 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 14:27:55,087  INFO 14192 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 14:27:55,096 ERROR 14192 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.RuntimeException: 创建数据库结构分析失败
+	at com.firesoon.syn.factory.analyse.AnalyserFactory.getInstance(AnalyserFactory.java:43) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:52) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: 无法识别的数据库类型：Microsoft SQL Server
+	at com.firesoon.syn.factory.analyse.AnalyserFactory.getInstance(AnalyserFactory.java:38) ~[classes/:?]
+	... 1 more
+2020-07-09 18:01:42,242  INFO 12784 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 18:01:42,269  INFO 12784 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 18:01:42,270  INFO 12784 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 18:01:44,917  INFO 12784 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 18:01:44,918  INFO 12784 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 18:01:44,932  INFO 12784 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 18:01:44,937 ERROR 12784 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.RuntimeException: 创建数据库结构分析失败
+	at com.firesoon.syn.factory.analyse.AnalyserFactory.getInstance(AnalyserFactory.java:46) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:52) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: 无法识别的数据库类型：Microsoft SQL Server
+	at com.firesoon.syn.factory.analyse.AnalyserFactory.getInstance(AnalyserFactory.java:41) ~[classes/:?]
+	... 1 more
+2020-07-09 19:17:48,395  INFO 14944 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:19:29,125  INFO 14944 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:19:33,407  INFO 14944 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:20:17,558  INFO 14944 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:20:23,113  INFO 14944 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:21:22,514  INFO 14944 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:22:53,623 ERROR 14944 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.RuntimeException: 创建数据库结构分析失败
+	at com.firesoon.syn.factory.analyse.AnalyserFactory.getInstance(AnalyserFactory.java:46) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:52) [classes/:?]
+Caused by: java.lang.IllegalArgumentException: 无法识别的数据库类型：Microsoft SQL Server
+	at com.firesoon.syn.factory.analyse.AnalyserFactory.getInstance(AnalyserFactory.java:41) ~[classes/:?]
+	... 1 more
+2020-07-09 19:22:59,804  INFO 3444 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:23:01,464  INFO 3444 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:23:01,856  INFO 3444 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:23:30,911  INFO 3444 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:23:33,437  INFO 3444 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:23:37,235  INFO 3444 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:23:46,303  INFO 3444 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 19:25:24,638 ERROR 3444 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.AbstractMethodError: com.microsoft.sqlserver.jdbc.SQLServerConnection.getSchema()Ljava/lang/String;
+	at com.firesoon.syn.factory.analyse.Analyser.listTables(Analyser.java:60) ~[classes/:?]
+	at com.firesoon.syn.factory.analyse.Analyser.getDataBaseDefine(Analyser.java:44) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:53) [classes/:?]
+2020-07-09 19:25:32,764  INFO 9176 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:25:35,916  INFO 9176 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:25:35,917  INFO 9176 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:25:37,628  INFO 9176 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:25:37,628  INFO 9176 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:25:41,890  INFO 9176 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:25:41,926  INFO 9176 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 19:25:55,989 ERROR 9176 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.AbstractMethodError: com.microsoft.sqlserver.jdbc.SQLServerConnection.getSchema()Ljava/lang/String;
+	at com.firesoon.syn.factory.analyse.Analyser.listTables(Analyser.java:60) ~[classes/:?]
+	at com.firesoon.syn.factory.analyse.Analyser.getDataBaseDefine(Analyser.java:44) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:53) [classes/:?]
+2020-07-09 19:26:15,057  INFO 2340 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:26:15,066  INFO 2340 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:26:15,066  INFO 2340 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:26:17,566  INFO 2340 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:26:17,567  INFO 2340 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:26:17,580  INFO 2340 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:26:17,591  INFO 2340 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 19:26:34,253 ERROR 2340 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.AbstractMethodError: com.microsoft.sqlserver.jdbc.SQLServerConnection.getSchema()Ljava/lang/String;
+	at com.firesoon.syn.factory.analyse.Analyser.listTables(Analyser.java:60) ~[classes/:?]
+	at com.firesoon.syn.factory.analyse.Analyser.getDataBaseDefine(Analyser.java:44) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:53) [classes/:?]
+2020-07-09 19:26:38,442  INFO 11252 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:26:38,451  INFO 11252 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:26:38,453  INFO 11252 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:26:40,402  INFO 11252 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:26:40,402  INFO 11252 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:26:40,416  INFO 11252 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:26:40,429  INFO 11252 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 19:27:18,750 ERROR 11252 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.AbstractMethodError: com.microsoft.sqlserver.jdbc.SQLServerConnection.getSchema()Ljava/lang/String;
+	at com.firesoon.syn.factory.analyse.Analyser.listTables(Analyser.java:60) ~[classes/:?]
+	at com.firesoon.syn.factory.analyse.Analyser.getDataBaseDefine(Analyser.java:44) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:53) [classes/:?]
+2020-07-09 19:27:23,383  INFO 7216 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:27:23,391  INFO 7216 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:27:23,392  INFO 7216 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:27:25,326  INFO 7216 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:27:25,327  INFO 7216 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:27:25,338  INFO 7216 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:27:25,351  INFO 7216 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 19:29:42,817 ERROR 7216 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.AbstractMethodError: com.microsoft.sqlserver.jdbc.SQLServerConnection.getSchema()Ljava/lang/String;
+	at com.firesoon.syn.factory.analyse.Analyser.listTables(Analyser.java:60) ~[classes/:?]
+	at com.firesoon.syn.factory.analyse.Analyser.getDataBaseDefine(Analyser.java:44) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:53) [classes/:?]
+2020-07-09 19:35:11,515  INFO 5784 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:35:11,527  INFO 5784 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,source.user.schema:dbo,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:35:11,528  INFO 5784 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:35:14,825  INFO 5784 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:35:14,826  INFO 5784 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:35:14,840  INFO 5784 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:35:14,855  INFO 5784 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 19:35:28,710 ERROR 5784 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.AbstractMethodError: com.microsoft.sqlserver.jdbc.SQLServerConnection.getSchema()Ljava/lang/String;
+	at com.firesoon.syn.factory.analyse.Analyser.listTables(Analyser.java:60) ~[classes/:?]
+	at com.firesoon.syn.factory.analyse.Analyser.getDataBaseDefine(Analyser.java:44) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:53) [classes/:?]
+2020-07-09 19:36:56,862  INFO 8196 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 19:36:56,870  INFO 8196 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,source.user.schema:dbo,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 19:36:56,871  INFO 8196 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 19:36:59,405  INFO 8196 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 19:36:59,406  INFO 8196 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 19:36:59,422  INFO 8196 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 19:36:59,447  INFO 8196 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 19:37:05,373  INFO 8196 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：HS，模式：
+2020-07-09 19:37:11,008  INFO 8196 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:63 - 开始读取表信息
+2020-07-09 19:38:22,872  INFO 8196 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:65 - 获取到5条表信息
+2020-07-09 19:38:24,251  INFO 8196 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:68 - 开始处理表信息
+2020-07-09 19:38:53,663  INFO 8196 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:74 - 表信息处理完成
+2020-07-09 19:39:08,996  INFO 8196 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:77 - 开始读取列信息
+2020-07-09 19:40:12,874 ERROR 8196 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.lang.NullPointerException: null
+	at com.firesoon.syn.factory.analyse.Analyser.listTables(Analyser.java:80) ~[classes/:?]
+	at com.firesoon.syn.factory.analyse.Analyser.getDataBaseDefine(Analyser.java:44) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:53) [classes/:?]
+2020-07-09 20:01:28,829  INFO 3268 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-09 20:01:28,837  INFO 3268 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,source.user.schema:dbo,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-09 20:01:28,838  INFO 3268 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-09 20:01:30,866  INFO 3268 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-09 20:01:30,866  INFO 3268 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-09 20:01:30,879  INFO 3268 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-09 20:01:30,890  INFO 3268 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-09 20:01:43,149  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：HS，模式：
+2020-07-09 20:01:43,153  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:63 - 开始读取表信息
+2020-07-09 20:01:44,502  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:65 - 获取到5条表信息
+2020-07-09 20:01:44,505  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:68 - 开始处理表信息
+2020-07-09 20:01:44,509  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:74 - 表信息处理完成
+2020-07-09 20:01:44,512  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:77 - 开始读取列信息
+2020-07-09 20:07:07,986  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:80 - 获取到38条列信息
+2020-07-09 20:07:07,986  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:82 - 开始归并列至所属表
+2020-07-09 20:08:26,233  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:100 - 归并列至所属表完成
+2020-07-09 20:08:29,304  INFO 3268 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:102 - 开始获取主键信息

@@ -1,0 +1,47 @@
+2020-07-16 09:31:56,452  INFO 10768 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-16 09:31:56,494  INFO 10768 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.microsoft.sqlserver.jdbc.SQLServerDriver,source.user.password:Sql@2019,source.user.schema:dbo,target.user.schema:123456,source.database.type:SQLSERVER,source.database.port:1433,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,target.user.name:hzp,source.database.name:HS,source.user.name:sa ,source.database.ip:172.16.8.46,target.database.name:hdctest]
+2020-07-16 09:31:56,495  INFO 10768 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-16 09:31:58,729  INFO 10768 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-16 09:31:58,730  INFO 10768 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-16 09:31:58,805  INFO 10768 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Microsoft SQL Server，版本：8.00.2039
+2020-07-16 09:31:58,806  INFO 10768 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-16 09:31:58,807  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：HS，模式：
+2020-07-16 09:31:58,808  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:63 - 开始读取表信息
+2020-07-16 09:31:58,894  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:65 - 获取到5条表信息
+2020-07-16 09:31:58,894  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:68 - 开始处理表信息
+2020-07-16 09:31:58,895  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:74 - 表信息处理完成
+2020-07-16 09:31:58,895  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:77 - 开始读取列信息
+2020-07-16 09:31:58,969  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:80 - 获取到28条列信息
+2020-07-16 09:31:58,970  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:82 - 开始归并列至所属表
+2020-07-16 09:31:58,971  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:101 - 归并列至所属表完成
+2020-07-16 09:31:58,972  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:103 - 开始获取主键信息
+2020-07-16 09:31:58,975  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:105 - 主键信息获取完成
+2020-07-16 09:31:58,975  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:107 - 开始归并主键信息
+2020-07-16 09:31:58,975  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:109 - 主键信息归并完成
+2020-07-16 09:31:58,975  INFO 10768 main com.firesoon.syn.factory.analyse.impl.SqlServerSqlAnalyser:111 - 数据库表结构定义读取完毕，共读取到5条表信息
+2020-07-16 09:31:58,976  INFO 10768 main com.firesoon.syn.Transfer:54 - 源数据库结构定义获取完毕
+2020-07-16 09:31:58,977  INFO 10768 main com.firesoon.syn.Transfer:59 - 开始转换为目标数据库类型
+2020-07-16 09:31:59,252  INFO 10768 main com.firesoon.syn.Transfer:62 - 目标数据库类型转换完成
+2020-07-16 09:31:59,253  INFO 10768 main com.firesoon.syn.Transfer:65 - 开始构造目标数据库结构
+2020-07-16 09:31:59,311  INFO 10768 main com.firesoon.syn.factory.generate.GeneratorFactory:39 - 开始初始化数据库结构，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-16 09:31:59,311  INFO 10768 main com.firesoon.syn.factory.generate.GeneratorFactory:52 - 数据库结构初始化完毕
+2020-07-16 09:31:59,525  INFO 10768 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库hs已存在，无需再次创建
+2020-07-16 09:31:59,576  INFO 10768 main com.firesoon.syn.factory.analyse.AnalyserFactory:29 - 开始构造数据库结构分析，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.4.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-16 09:31:59,577  INFO 10768 main com.firesoon.syn.factory.analyse.AnalyserFactory:43 - 数据库结构分析构造完毕
+2020-07-16 09:31:59,586  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：null，模式：
+2020-07-16 09:31:59,587  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:63 - 开始读取表信息
+2020-07-16 09:31:59,602  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:65 - 获取到5条表信息
+2020-07-16 09:31:59,602  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:68 - 开始处理表信息
+2020-07-16 09:31:59,602  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:74 - 表信息处理完成
+2020-07-16 09:31:59,603  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:77 - 开始读取列信息
+2020-07-16 09:32:01,220  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:80 - 获取到28条列信息
+2020-07-16 09:32:01,221  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:82 - 开始归并列至所属表
+2020-07-16 09:32:01,221  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:101 - 归并列至所属表完成
+2020-07-16 09:32:01,221  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:103 - 开始获取主键信息
+2020-07-16 09:32:02,952  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:105 - 主键信息获取完成
+2020-07-16 09:32:02,952  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:107 - 开始归并主键信息
+2020-07-16 09:32:02,953  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:109 - 主键信息归并完成
+2020-07-16 09:32:02,953  INFO 10768 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:111 - 数据库表结构定义读取完毕，共读取到5条表信息
+2020-07-16 09:32:02,955  INFO 10768 main com.firesoon.syn.Transfer:77 - 目标数据库结构构造完成

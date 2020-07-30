@@ -15,4 +15,5 @@ public final class ConvertType {
 	public static final String MYSQL2ORACLE = "MYSQL2ORACLE";
 	public static final String POSTGRESQL2ORACLE = "POSTGRESQL2ORACLE";
 	public static final String SQLSERVER2ORACLE = "MICROSOFT SQL SERVER2ORACLE";
+	public static final String ORACLE2ORACLE = "ORACLE2ORACLE";
 }

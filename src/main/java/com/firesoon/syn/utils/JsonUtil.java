@@ -2,9 +2,11 @@ package com.firesoon.syn.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.springframework.core.io.ClassPathResource;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -33,9 +35,11 @@ public class JsonUtil {
 			synchronized (JsonUtil.class) {
 				if (jsonMap == null) {
 					jsonMap = new ConcurrentHashMap<>();
-					ClassPathResource resource = new ClassPathResource(jsonPath);
-					File file = resource.getFile();
-					String jsonString = FileUtils.readFileToString(file, "utf-8");
+					//ClassPathResource resource = new ClassPathResource(jsonPath);
+					//File file = resource.getFile();
+					//String jsonString = FileUtils.readFileToString(file, "utf-8");
+					InputStream inputStream = JsonUtil.class.getClassLoader().getResourceAsStream(jsonPath);
+					String jsonString = IOUtils.toString(inputStream, "utf-8");
 					JSONObject jsonObject = JSONObject.parseObject(jsonString);
 					Set<String> keySet = jsonObject.keySet();
 					Iterator<String> iterator = keySet.iterator();

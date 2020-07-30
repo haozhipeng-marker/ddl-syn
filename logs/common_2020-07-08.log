@@ -1,0 +1,362 @@
+2020-07-08 16:23:21,683  INFO 7708 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-08 16:25:01,997  INFO 7708 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.mysql.cj.jdbc.Driver,source.user.password:root,hive.user.password:,hive.driverClass:,target.user.schema:,source.database.type:MYSQL,source.database.port:3306,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,source.database.name:dolphinscheduler,target.user.name:hzp,hive.url:,source.user.name:root,source.database.ip:172.16.3.76,target.database.name:hdctest,hive.user.name:]
+2020-07-08 16:25:49,253  INFO 7708 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-08 16:27:43,645  INFO 7708 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-08 16:27:46,748  INFO 7708 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-08 16:28:49,103  INFO 7708 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：MySQL，版本：5.7.23
+2020-07-08 16:29:20,379  INFO 7708 main com.firesoon.syn.factory.analyse.AnalyserFactory:40 - 数据库结构分析构造完毕
+2020-07-08 16:30:37,446  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 16:30:38,761  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 16:34:32,118  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 16:34:45,676  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 16:36:07,196  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 16:36:10,056  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 16:36:55,199  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 16:36:55,205  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 16:36:55,279  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 16:36:55,282  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 16:36:55,286  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 16:36:55,289  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 16:37:00,277  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:80 - 获取到336条列信息
+2020-07-08 16:37:01,182  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 16:37:08,838  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 16:37:08,842  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 16:37:08,914  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 16:37:08,917  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 16:37:08,922  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 16:37:08,925  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 16:37:12,918  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 16:37:12,922  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 16:37:12,995  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 16:37:12,998  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 16:37:13,002  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 16:37:13,005  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 16:47:29,454  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:80 - 获取到336条列信息
+2020-07-08 16:47:34,984  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 16:52:58,243  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:100 - 归并列至所属表完成
+2020-07-08 16:52:58,245  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:102 - 开始获取主键信息
+2020-07-08 17:03:32,208  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:104 - 主键信息获取完成
+2020-07-08 17:03:41,797  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:106 - 开始归并主键信息
+2020-07-08 17:08:17,446  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:108 - 主键信息归并完成
+2020-07-08 17:08:17,446  INFO 7708 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:110 - 数据库表结构定义读取完毕，共读取到38条表信息
+2020-07-08 17:12:22,769  INFO 7708 main com.firesoon.syn.Transfer:54 - 源数据库结构定义获取完毕
+2020-07-08 17:12:53,322  INFO 7708 main com.firesoon.syn.Transfer:59 - 开始转换为目标数据库类型
+2020-07-08 17:13:35,634  INFO 7708 main com.firesoon.syn.Transfer:62 - 目标数据库类型转换完成
+2020-07-08 17:17:45,151  INFO 7708 main com.firesoon.syn.Transfer:65 - 开始构造目标数据库结构
+2020-07-08 17:20:34,490  INFO 7708 main com.firesoon.syn.factory.generate.GeneratorFactory:39 - 开始初始化数据库结构，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-08 17:21:10,237  INFO 7708 main com.firesoon.syn.factory.generate.GeneratorFactory:52 - 数据库结构初始化完毕
+2020-07-08 17:21:40,643  INFO 7708 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:27:39,716  INFO 7708 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:28:30,998  INFO 7708 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:32:30,634 ERROR 7708 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.sql.SQLException: ORA-01005: null password given; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_221]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_221]
+	at com.firesoon.syn.factory.generate.Generator.generateStructure(Generator.java:88) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:76) [classes/:?]
+2020-07-08 17:33:58,394  INFO 3476 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-08 17:33:58,406  INFO 3476 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.mysql.cj.jdbc.Driver,source.user.password:root,hive.user.password:,hive.driverClass:,target.user.schema:,source.database.type:MYSQL,source.database.port:3306,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,source.database.name:dolphinscheduler,target.user.name:hzp,hive.url:,source.user.name:root,source.database.ip:172.16.3.76,target.database.name:hdctest,hive.user.name:]
+2020-07-08 17:33:58,407  INFO 3476 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-08 17:34:01,004  INFO 3476 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-08 17:34:01,004  INFO 3476 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-08 17:34:01,009  INFO 3476 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：MySQL，版本：5.7.23
+2020-07-08 17:34:01,010  INFO 3476 main com.firesoon.syn.factory.analyse.AnalyserFactory:40 - 数据库结构分析构造完毕
+2020-07-08 17:34:01,064  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 17:34:01,065  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 17:34:01,070  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 17:34:01,071  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 17:34:01,071  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 17:34:01,071  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 17:34:01,116  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:80 - 获取到336条列信息
+2020-07-08 17:34:01,117  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 17:34:01,118  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:100 - 归并列至所属表完成
+2020-07-08 17:34:01,118  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:102 - 开始获取主键信息
+2020-07-08 17:34:01,128  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:104 - 主键信息获取完成
+2020-07-08 17:34:01,128  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:106 - 开始归并主键信息
+2020-07-08 17:34:01,128  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:108 - 主键信息归并完成
+2020-07-08 17:34:01,129  INFO 3476 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:110 - 数据库表结构定义读取完毕，共读取到38条表信息
+2020-07-08 17:34:01,129  INFO 3476 main com.firesoon.syn.Transfer:54 - 源数据库结构定义获取完毕
+2020-07-08 17:34:01,129  INFO 3476 main com.firesoon.syn.Transfer:59 - 开始转换为目标数据库类型
+2020-07-08 17:34:01,277  INFO 3476 main com.firesoon.syn.Transfer:62 - 目标数据库类型转换完成
+2020-07-08 17:34:01,278  INFO 3476 main com.firesoon.syn.Transfer:65 - 开始构造目标数据库结构
+2020-07-08 17:34:23,072  INFO 3476 main com.firesoon.syn.factory.generate.GeneratorFactory:39 - 开始初始化数据库结构，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-08 17:34:26,856  INFO 3476 main com.firesoon.syn.factory.generate.GeneratorFactory:52 - 数据库结构初始化完毕
+2020-07-08 17:34:43,572  INFO 3476 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:37:49,664 ERROR 3476 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.sql.SQLException: ORA-01005: null password given; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_221]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_221]
+	at com.firesoon.syn.factory.generate.Generator.generateStructure(Generator.java:88) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:76) [classes/:?]
+2020-07-08 17:38:04,878  INFO 12768 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-08 17:38:04,887  INFO 12768 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.mysql.cj.jdbc.Driver,source.user.password:root,hive.user.password:,hive.driverClass:,target.user.schema:,source.database.type:MYSQL,source.database.port:3306,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,source.database.name:dolphinscheduler,target.user.name:hzp,hive.url:,source.user.name:root,source.database.ip:172.16.3.76,target.database.name:hdctest,hive.user.name:]
+2020-07-08 17:38:04,887  INFO 12768 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-08 17:38:07,091  INFO 12768 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-08 17:38:07,092  INFO 12768 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-08 17:38:07,099  INFO 12768 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：MySQL，版本：5.7.23
+2020-07-08 17:38:07,102  INFO 12768 main com.firesoon.syn.factory.analyse.AnalyserFactory:40 - 数据库结构分析构造完毕
+2020-07-08 17:38:07,147  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 17:38:07,148  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 17:38:07,153  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 17:38:07,153  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 17:38:07,153  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 17:38:07,154  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 17:38:07,199  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:80 - 获取到336条列信息
+2020-07-08 17:38:07,200  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 17:38:07,201  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:100 - 归并列至所属表完成
+2020-07-08 17:38:07,201  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:102 - 开始获取主键信息
+2020-07-08 17:38:07,206  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:104 - 主键信息获取完成
+2020-07-08 17:38:07,206  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:106 - 开始归并主键信息
+2020-07-08 17:38:07,207  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:108 - 主键信息归并完成
+2020-07-08 17:38:07,207  INFO 12768 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:110 - 数据库表结构定义读取完毕，共读取到38条表信息
+2020-07-08 17:38:07,208  INFO 12768 main com.firesoon.syn.Transfer:54 - 源数据库结构定义获取完毕
+2020-07-08 17:38:07,208  INFO 12768 main com.firesoon.syn.Transfer:59 - 开始转换为目标数据库类型
+2020-07-08 17:38:07,324  INFO 12768 main com.firesoon.syn.Transfer:62 - 目标数据库类型转换完成
+2020-07-08 17:38:07,324  INFO 12768 main com.firesoon.syn.Transfer:65 - 开始构造目标数据库结构
+2020-07-08 17:38:07,328  INFO 12768 main com.firesoon.syn.factory.generate.GeneratorFactory:39 - 开始初始化数据库结构，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-08 17:38:07,330  INFO 12768 main com.firesoon.syn.factory.generate.GeneratorFactory:52 - 数据库结构初始化完毕
+2020-07-08 17:38:07,516  INFO 12768 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:38:07,583 ERROR 12768 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.sql.SQLException: ORA-01005: null password given; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_221]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_221]
+	at com.firesoon.syn.factory.generate.Generator.generateStructure(Generator.java:88) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:76) [classes/:?]
+2020-07-08 17:38:37,571  INFO 2320 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-08 17:38:37,581  INFO 2320 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.mysql.cj.jdbc.Driver,source.user.password:root,hive.user.password:,hive.driverClass:,target.user.schema:,source.database.type:MYSQL,source.database.port:3306,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,source.database.name:dolphinscheduler,target.user.name:hzp,hive.url:,source.user.name:root,source.database.ip:172.16.3.76,target.database.name:hdctest,hive.user.name:]
+2020-07-08 17:38:37,582  INFO 2320 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-08 17:38:40,250  INFO 2320 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-08 17:38:40,251  INFO 2320 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-08 17:38:40,257  INFO 2320 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：MySQL，版本：5.7.23
+2020-07-08 17:38:40,259  INFO 2320 main com.firesoon.syn.factory.analyse.AnalyserFactory:40 - 数据库结构分析构造完毕
+2020-07-08 17:38:40,298  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 17:38:40,299  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 17:38:40,305  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 17:38:40,305  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 17:38:40,306  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 17:38:40,306  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 17:38:40,347  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:80 - 获取到336条列信息
+2020-07-08 17:38:40,348  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 17:38:40,349  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:100 - 归并列至所属表完成
+2020-07-08 17:38:40,350  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:102 - 开始获取主键信息
+2020-07-08 17:38:40,355  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:104 - 主键信息获取完成
+2020-07-08 17:38:40,355  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:106 - 开始归并主键信息
+2020-07-08 17:38:40,356  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:108 - 主键信息归并完成
+2020-07-08 17:38:40,356  INFO 2320 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:110 - 数据库表结构定义读取完毕，共读取到38条表信息
+2020-07-08 17:38:40,357  INFO 2320 main com.firesoon.syn.Transfer:54 - 源数据库结构定义获取完毕
+2020-07-08 17:38:40,357  INFO 2320 main com.firesoon.syn.Transfer:59 - 开始转换为目标数据库类型
+2020-07-08 17:38:40,481  INFO 2320 main com.firesoon.syn.Transfer:62 - 目标数据库类型转换完成
+2020-07-08 17:38:40,482  INFO 2320 main com.firesoon.syn.Transfer:65 - 开始构造目标数据库结构
+2020-07-08 17:38:48,868  INFO 2320 main com.firesoon.syn.factory.generate.GeneratorFactory:39 - 开始初始化数据库结构，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-08 17:38:48,890  INFO 2320 main com.firesoon.syn.factory.generate.GeneratorFactory:52 - 数据库结构初始化完毕
+2020-07-08 17:38:53,844  INFO 2320 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:40:23,127 ERROR 2320 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.sql.SQLException: ORA-01005: null password given; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_221]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_221]
+	at com.firesoon.syn.factory.generate.Generator.generateStructure(Generator.java:88) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:76) [classes/:?]
+2020-07-08 17:40:29,049  INFO 13176 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-08 17:40:29,066  INFO 13176 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.mysql.cj.jdbc.Driver,source.user.password:root,hive.user.password:,hive.driverClass:,target.user.schema:,source.database.type:MYSQL,source.database.port:3306,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,source.database.name:dolphinscheduler,target.user.name:hzp,hive.url:,source.user.name:root,source.database.ip:172.16.3.76,target.database.name:hdctest,hive.user.name:]
+2020-07-08 17:40:29,066  INFO 13176 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-08 17:40:31,577  INFO 13176 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-08 17:40:31,578  INFO 13176 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-08 17:40:31,583  INFO 13176 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：MySQL，版本：5.7.23
+2020-07-08 17:40:31,584  INFO 13176 main com.firesoon.syn.factory.analyse.AnalyserFactory:40 - 数据库结构分析构造完毕
+2020-07-08 17:40:31,620  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 17:40:31,620  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 17:40:31,624  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 17:40:31,624  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 17:40:31,625  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 17:40:31,625  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 17:40:31,691  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:80 - 获取到336条列信息
+2020-07-08 17:40:31,691  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 17:40:31,692  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:100 - 归并列至所属表完成
+2020-07-08 17:40:31,693  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:102 - 开始获取主键信息
+2020-07-08 17:40:31,707  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:104 - 主键信息获取完成
+2020-07-08 17:40:31,708  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:106 - 开始归并主键信息
+2020-07-08 17:40:31,708  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:108 - 主键信息归并完成
+2020-07-08 17:40:31,708  INFO 13176 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:110 - 数据库表结构定义读取完毕，共读取到38条表信息
+2020-07-08 17:40:31,708  INFO 13176 main com.firesoon.syn.Transfer:54 - 源数据库结构定义获取完毕
+2020-07-08 17:40:31,709  INFO 13176 main com.firesoon.syn.Transfer:59 - 开始转换为目标数据库类型
+2020-07-08 17:40:31,847  INFO 13176 main com.firesoon.syn.Transfer:62 - 目标数据库类型转换完成
+2020-07-08 17:40:31,847  INFO 13176 main com.firesoon.syn.Transfer:65 - 开始构造目标数据库结构
+2020-07-08 17:41:18,455  INFO 13176 main com.firesoon.syn.factory.generate.GeneratorFactory:39 - 开始初始化数据库结构，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-08 17:41:18,463  INFO 13176 main com.firesoon.syn.factory.generate.GeneratorFactory:52 - 数据库结构初始化完毕
+2020-07-08 17:41:18,754  INFO 13176 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:42:32,315 ERROR 13176 main com.firesoon.syn.Transfer:83 - 转换数据库失败
+java.sql.SQLException: ORA-01005: null password given; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:456) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:451) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:1040) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:552) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:550) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:268) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:501) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1292) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:1025) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:743) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:793) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:57) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:747) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:562) ~[ojdbc8-19.3.0.0.jar:19.3.0.0.0]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[?:1.8.0_221]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[?:1.8.0_221]
+	at com.firesoon.syn.factory.generate.Generator.generateStructure(Generator.java:88) ~[classes/:?]
+	at com.firesoon.syn.Transfer.main(Transfer.java:76) [classes/:?]
+2020-07-08 17:42:39,174  INFO 11412 main com.firesoon.syn.Transfer:43 - 开始读取配置文件
+2020-07-08 17:42:39,182  INFO 11412 main com.firesoon.syn.Transfer:45 - 配置文件读取完毕，配置信息：[source.driverClass:com.mysql.cj.jdbc.Driver,source.user.password:root,hive.user.password:,hive.driverClass:,target.user.schema:123456,source.database.type:MYSQL,source.database.port:3306,target.database.type:ORACLE,target.database.ip:172.16.3.73,target.driverClass:oracle.jdbc.driver.OracleDriver,target.database.port:1521,target.user.password:123456,source.database.name:dolphinscheduler,target.user.name:hzp,hive.url:,source.user.name:root,source.database.ip:172.16.3.76,target.database.name:hdctest,hive.user.name:]
+2020-07-08 17:42:39,183  INFO 11412 main com.firesoon.syn.Transfer:47 - 开始连接至数据库
+2020-07-08 17:42:41,464  INFO 11412 main com.firesoon.syn.Transfer:49 - 成功连接至数据库
+2020-07-08 17:42:41,464  INFO 11412 main com.firesoon.syn.Transfer:51 - 开始获取源数据库结构定义
+2020-07-08 17:42:41,474  INFO 11412 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：MySQL，版本：5.7.23
+2020-07-08 17:42:41,476  INFO 11412 main com.firesoon.syn.factory.analyse.AnalyserFactory:40 - 数据库结构分析构造完毕
+2020-07-08 17:42:41,527  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：dolphinscheduler，模式：null
+2020-07-08 17:42:41,528  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:63 - 开始读取表信息
+2020-07-08 17:42:41,533  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:65 - 获取到38条表信息
+2020-07-08 17:42:41,533  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:68 - 开始处理表信息
+2020-07-08 17:42:41,534  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:74 - 表信息处理完成
+2020-07-08 17:42:41,534  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:77 - 开始读取列信息
+2020-07-08 17:42:41,572  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:80 - 获取到336条列信息
+2020-07-08 17:42:41,573  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 17:42:41,574  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:100 - 归并列至所属表完成
+2020-07-08 17:42:41,575  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:102 - 开始获取主键信息
+2020-07-08 17:42:41,581  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:104 - 主键信息获取完成
+2020-07-08 17:42:41,581  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:106 - 开始归并主键信息
+2020-07-08 17:42:41,583  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:108 - 主键信息归并完成
+2020-07-08 17:42:41,583  INFO 11412 main com.firesoon.syn.factory.analyse.impl.MySqlAnalyser:110 - 数据库表结构定义读取完毕，共读取到38条表信息
+2020-07-08 17:42:41,583  INFO 11412 main com.firesoon.syn.Transfer:54 - 源数据库结构定义获取完毕
+2020-07-08 17:42:41,583  INFO 11412 main com.firesoon.syn.Transfer:59 - 开始转换为目标数据库类型
+2020-07-08 17:42:41,721  INFO 11412 main com.firesoon.syn.Transfer:62 - 目标数据库类型转换完成
+2020-07-08 17:42:41,722  INFO 11412 main com.firesoon.syn.Transfer:65 - 开始构造目标数据库结构
+2020-07-08 17:42:49,407  INFO 11412 main com.firesoon.syn.factory.generate.GeneratorFactory:39 - 开始初始化数据库结构，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-08 17:42:49,427  INFO 11412 main com.firesoon.syn.factory.generate.GeneratorFactory:52 - 数据库结构初始化完毕
+2020-07-08 17:42:53,587  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:111 - 库dolphinscheduler已存在，无需再次创建
+2020-07-08 17:43:33,590  INFO 11412 main com.firesoon.syn.factory.analyse.AnalyserFactory:28 - 开始构造数据库结构分析，数据库类型：Oracle，版本：Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - 64bit Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+2020-07-08 17:43:33,613  INFO 11412 main com.firesoon.syn.factory.analyse.AnalyserFactory:40 - 数据库结构分析构造完毕
+2020-07-08 17:43:33,654  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:61 - 开始读取数据库表结构定义，数据库名：null，模式：HZP
+2020-07-08 17:43:33,659  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:63 - 开始读取表信息
+2020-07-08 17:43:33,686  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:65 - 获取到0条表信息
+2020-07-08 17:43:33,690  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:68 - 开始处理表信息
+2020-07-08 17:43:33,694  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:74 - 表信息处理完成
+2020-07-08 17:43:33,698  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:77 - 开始读取列信息
+2020-07-08 17:43:35,501  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:80 - 获取到0条列信息
+2020-07-08 17:43:35,505  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:82 - 开始归并列至所属表
+2020-07-08 17:43:35,508  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:100 - 归并列至所属表完成
+2020-07-08 17:43:35,511  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:102 - 开始获取主键信息
+2020-07-08 17:43:37,392  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:104 - 主键信息获取完成
+2020-07-08 17:43:37,397  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:106 - 开始归并主键信息
+2020-07-08 17:43:37,402  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:108 - 主键信息归并完成
+2020-07-08 17:43:37,406  INFO 11412 main com.firesoon.syn.factory.analyse.impl.OracleSqlAnalyser:110 - 数据库表结构定义读取完毕，共读取到0条表信息
+2020-07-08 17:43:37,459  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_blob_triggers创建成功
+2020-07-08 17:43:37,502  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_calendars创建成功
+2020-07-08 17:43:37,550  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_cron_triggers创建成功
+2020-07-08 17:43:37,630  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_fired_triggers创建成功
+2020-07-08 17:43:37,692  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_job_details创建成功
+2020-07-08 17:43:37,728  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_locks创建成功
+2020-07-08 17:43:37,766  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_paused_trigger_grps创建成功
+2020-07-08 17:43:37,808  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_scheduler_state创建成功
+2020-07-08 17:43:37,856  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_simple_triggers创建成功
+2020-07-08 17:43:37,913  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_simprop_triggers创建成功
+2020-07-08 17:43:37,984  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表qrtz_triggers创建成功
+2020-07-08 17:43:38,141  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_access_token创建成功
+2020-07-08 17:43:38,466  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_alert创建成功
+2020-07-08 17:43:38,599  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_alertgroup创建成功
+2020-07-08 17:43:38,956  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_command创建成功
+2020-07-08 17:43:39,160  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_datasource创建成功
+2020-07-08 17:43:39,558  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_error_command创建成功
+2020-07-08 17:43:39,745  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_master_server创建成功
+2020-07-08 17:43:40,163  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_process_definition创建成功
+2020-07-08 17:43:40,910  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_process_instance创建成功
+2020-07-08 17:43:41,132  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_project创建成功
+2020-07-08 17:43:41,266  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_queue创建成功
+2020-07-08 17:43:41,428  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_relation_datasource_user创建成功
+2020-07-08 17:43:41,544  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_relation_process_instance创建成功
+2020-07-08 17:43:41,699  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_relation_project_user创建成功
+2020-07-08 17:43:41,838  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_relation_resources_user创建成功
+2020-07-08 17:43:41,995  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_relation_udfs_user创建成功
+2020-07-08 17:43:42,133  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_relation_user_alertgroup创建成功
+2020-07-08 17:43:42,332  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_resources创建成功
+2020-07-08 17:43:42,672  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_schedules创建成功
+2020-07-08 17:43:42,790  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_session创建成功
+2020-07-08 17:43:43,302  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_task_instance创建成功
+2020-07-08 17:43:43,459  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_tenant创建成功
+2020-07-08 17:43:43,731  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_udfs创建成功
+2020-07-08 17:43:43,965  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_user创建成功
+2020-07-08 17:43:44,020  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_version创建成功
+2020-07-08 17:43:44,158  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_worker_group创建成功
+2020-07-08 17:43:44,357  INFO 11412 main com.firesoon.syn.factory.generate.impl.OracleSqlGenerator:143 - 表t_ds_worker_server创建成功
+2020-07-08 17:44:00,479  INFO 11412 main com.firesoon.syn.Transfer:77 - 目标数据库结构构造完成
